@@ -52,4 +52,10 @@ public class Player : MonoBehaviour
         }
         spriteRenderer.sprite = sprites[spriteIndex];
     }
+
+    public void Sin()
+    {
+        gravity *= 1.5f;
+        Debug.Log("Gravity = " + gravity.ToString());
+    }
 }
