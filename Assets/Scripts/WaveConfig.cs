@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +9,8 @@ public class WaveConfig : ScriptableObject
     [SerializeField] GameObject pathPrefab;
     [SerializeField] float timeBetweenSpawns = 0.5f;
     [SerializeField] float spawnRandomFactor = 0.3f;
-    [SerializeField] int numberOfAngels = 5;
-    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] int numberOfAngels = 3;
+    [SerializeField] float moveSpeed = 5f;
 
     public GameObject GetAngelPrefab() { return angelPrefab; }
 

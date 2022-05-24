@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,6 +42,7 @@ public class AngelPathing : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            FindObjectOfType<GameSession>().MoveUpInLine(Random.Range(1000, 10000));
         }
     }
 
