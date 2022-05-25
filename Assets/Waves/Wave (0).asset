@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angelPrefab: {fileID: 7301167389375829949, guid: 21a2fe2f20dfa5b4aa39fcff671fdccc, type: 3}
   pathPrefab: {fileID: 672188973964073601, guid: 083ec9bc6abb5ae479987b3d412b3a04, type: 3}
-  timeBetweenSpawns: 0.5
+  timeBetweenSpawns: 0.8
   spawnRandomFactor: 0.3
-  numberOfAngels: 5
-  moveSpeed: 5
+  numberOfAngels: 2
+  moveSpeed: 3
