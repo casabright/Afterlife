@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    int placeInLine = 70000000;
+    int placeInLine = 1000000;
 
     private void Awake()
     {
