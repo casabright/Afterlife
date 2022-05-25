@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class GameSession : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    int placeInLine = 1000000;
+
+    [SerializeField] float weightOfSins = -9.8f; 
+    [SerializeField] int placeInLine = 1000000;
 
     private void Awake()
     {
@@ -11,8 +13,8 @@ public class GameSession : MonoBehaviour
 
     private void SetUpSingleton()
     {
-        int numberGameSessions = FindObjectsOfType<GameSession>().Length;
-        if (numberGameSessions > 1)
+        int numberGameManagers = FindObjectsOfType<GameManager>().Length;
+        if (numberGameManagers > 1)
         {
             Destroy(gameObject);
         }
@@ -32,6 +34,15 @@ public class GameSession : MonoBehaviour
         placeInLine -= placeValue;
     }
 
+    public float GetSinWeight()
+    {
+        return weightOfSins;
+    }
+
+    public void Sin()
+    {
+        weightOfSins *= 1.5f;
+    }
     public void ResetGame()
     {
         Destroy(gameObject);

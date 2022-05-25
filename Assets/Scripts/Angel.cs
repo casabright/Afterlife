@@ -6,7 +6,7 @@ public class Angel : MonoBehaviour
 {
     private void OnTriggerEnter2D()
     {
-        Player player = GameObject.FindObjectOfType(typeof(Player)) as Player;
-        player.Sin();
+        GameManager gameManager = GameObject.FindObjectOfType(typeof(GameManager)) as GameManager;
+        gameManager.Sin();
     }
 }

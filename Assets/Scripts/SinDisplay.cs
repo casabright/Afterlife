@@ -4,20 +4,18 @@ using TMPro;
 public class SinDisplay : MonoBehaviour
 {
     TextMeshProUGUI sinText;
-    GameSession gameSession;
-    Player player;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         sinText = GetComponent<TextMeshProUGUI>();
-        gameSession = FindObjectOfType<GameSession>();
-        player = FindObjectOfType<Player>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        sinText.text = "Weight of Sins: " + player.GetSinWeight().ToString();
+        sinText.text = "Weight of Sins: " + gameManager.GetSinWeight().ToString();
     }
 }

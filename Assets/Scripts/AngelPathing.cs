@@ -42,7 +42,7 @@ public class AngelPathing : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            FindObjectOfType<GameSession>().MoveUpInLine(Random.Range(1000, 10000));
+            FindObjectOfType<GameManager>().MoveUpInLine(Random.Range(1000, 10000));
         }
     }
 

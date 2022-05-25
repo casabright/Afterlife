@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 1f;
     private Vector3 movement;
     private Vector3 playerPos;
-    public float weightOfSins = -9.8f;
+    //public float weightOfSins = -9.8f;
     public float wingPower = 5f;
 
     [Header("Animation")]
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public Sprite[] sprites;
     private int spriteIndex;
 
+    GameManager gameManager;
     float xMin;
     float xMax;
     float yMin;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindObjectOfType(typeof(GameManager)) as GameManager;
         playerPos = transform.position;
         SetUpFlightBoundaries();
         InvokeRepeating(nameof(AnimateWings), 0.07f, 0.07f);
@@ -72,7 +74,8 @@ public class Player : MonoBehaviour
                 movement = Vector3.up * wingPower;
             }
         }
-        movement.y += weightOfSins * Time.deltaTime;
+        
+        movement.y += gameManager.GetSinWeight() * Time.deltaTime;
         movement.x += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         if (movement.x < 0)
         {
@@ -87,15 +90,4 @@ public class Player : MonoBehaviour
         playerPos.Set(Mathf.Clamp(playerPos.x, xMin, xMax), Mathf.Clamp(playerPos.y, yMin, yMax), 0);
         transform.position = playerPos;
    }
-
-    internal object GetSinWeight()
-    {
-        return weightOfSins;
-    }
-
-    public void Sin()
-    {
-        weightOfSins *= 1.5f;
-
-    }
 }

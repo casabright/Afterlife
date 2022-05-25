@@ -4,18 +4,18 @@ using TMPro;
 public class PlaceDisplay : MonoBehaviour
 {
     TextMeshProUGUI placeText;
-    GameSession gameSession;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         placeText = GetComponent<TextMeshProUGUI>();
-        gameSession = FindObjectOfType<GameSession>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        placeText.text = "Place in Line: " + gameSession.GetPlaceInLine().ToString();
+        placeText.text = "Place in Line: " + gameManager.GetPlaceInLine().ToString();
     }
 }
