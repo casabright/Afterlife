@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CloudSpawner : MonoBehaviour
 {
-    [SerializeField] int cloudComplexity = 5;
-    [SerializeField] int cloudDiffusion = 4;
-    [SerializeField] float cloudSpeed = 1f;
-    [SerializeField] float timeBetweenSpawns = 10f;
+    [SerializeField] int cloudComplexity = 6;
+    [SerializeField] int cloudDiffusion = 6;
+    [SerializeField] float cloudSpeed = 2f;
+    [SerializeField] float timeBetweenSpawns = 6f;
+    [SerializeField] float spawnTimeRandom = 2f;
     [SerializeField] int initSpawns = 6;
     [SerializeField] Sprite[] cloudSprites;
     [SerializeField] float spawnDistance = 4f;
@@ -36,7 +37,7 @@ public class CloudSpawner : MonoBehaviour
         do
         {
             SpawnCloud(spawnX);
-            yield return new WaitForSecondsRealtime(timeBetweenSpawns);
+            yield return new WaitForSecondsRealtime(Random.Range(timeBetweenSpawns - spawnTimeRandom, timeBetweenSpawns + spawnTimeRandom));
         }
         while (looping);
     }
@@ -48,11 +49,20 @@ public class CloudSpawner : MonoBehaviour
 
     public void SpawnCloud(float spawnX)
     {
+        // Create a cloud parent and add it to the Clouds layer
         GameObject cloudObject = new GameObject("Cloud");
         int layerClouds = LayerMask.NameToLayer("Clouds");
         cloudObject.layer = layerClouds;
+
+        // Add physics with Kinematic body type.
         Rigidbody2D cloudRigidbody2D = cloudObject.AddComponent<Rigidbody2D>();
         cloudObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+
+        // Give it a collider and make it a trigger for the shredder.
+        BoxCollider2D boxCollider2D = cloudObject.AddComponent<BoxCollider2D>();
+        cloudObject.transform.GetComponent<BoxCollider2D>().isTrigger = true;
+
+        // Generate cloudform
         for (int cloudBuilder = 0; cloudBuilder < cloudComplexity; cloudBuilder++)
         {
             GameObject cloudSection = new GameObject("Cloud Section " + cloudBuilder);

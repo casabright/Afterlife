@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6296184d3499c844fbe68e6efe5c4abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudComplexity: 5
-  cloudDiffusion: 4
-  cloudSpeed: 1
-  timeBetweenSpawns: 10
+  cloudComplexity: 6
+  cloudDiffusion: 6
+  cloudSpeed: 2
+  timeBetweenSpawns: 6
+  spawnTimeRandom: 2
   initSpawns: 6
   cloudSprites:
   - {fileID: 21300000, guid: 2b22ab2c80eae7b42b815baa76c9ee9b, type: 3}
@@ -67,5 +68,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 32e36ce4df61e43429415ee44a018653, type: 3}
   - {fileID: 21300000, guid: 036579614cc2f7648aa3b7a8da290ba2, type: 3}
   - {fileID: 21300000, guid: c6b320bfb211ca14b9473dcedaab80c6, type: 3}
-  spawnDistance: 6
+  spawnDistance: 4
   looping: 1

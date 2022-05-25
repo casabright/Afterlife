@@ -66,17 +66,24 @@ public class Player : MonoBehaviour
         {
             movement = Vector3.up * wingPower;
         }
-        if (Input.touchCount > 0)
+
+        // mobile
+        /*if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
                 movement = Vector3.up * wingPower;
             }
-        }
+        }*/
         
+        // Pull player down.
         movement.y += gameManager.GetSinWeight() * Time.deltaTime;
+
+        // Move player left/right
         movement.x += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        
+        // Flip player sprite horizontally if going left
         if (movement.x < 0)
         {
             spriteRenderer.flipX = true;
@@ -87,6 +94,8 @@ public class Player : MonoBehaviour
         }
 
         playerPos += movement * Time.deltaTime;
+
+        // keep player on the screen.
         playerPos.Set(Mathf.Clamp(playerPos.x, xMin, xMax), Mathf.Clamp(playerPos.y, yMin, yMax), 0);
         transform.position = playerPos;
    }
