@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class AngelPathing : MonoBehaviour
 {
+    GameManager gameManager;
     WaveConfig waveConfig;
+    SceneLoader sceneLoader;
     List<Transform> waypoints;
     int waypointIndex = 0;
 
     // Use this for initialization
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        sceneLoader = FindObjectOfType<SceneLoader>();
         waypoints = waveConfig.GetWaypoints();
         transform.position = waypoints[waypointIndex].transform.position;
     }
@@ -42,7 +46,12 @@ public class AngelPathing : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            FindObjectOfType<GameManager>().MoveUpInLine(Random.Range(1000, 10000));
+            gameManager.MoveUpInLine(Random.Range(1000, 10000));
+            if (gameManager.GetPlaceInLine() <= 140000)
+            {
+                sceneLoader.LoadHeaven();
+            }
+
         }
     }
 

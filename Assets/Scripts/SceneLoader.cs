@@ -25,6 +25,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Game Over");
     }
 
+    public void LoadHeaven()
+    {
+        SceneManager.LoadScene("Heaven");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
