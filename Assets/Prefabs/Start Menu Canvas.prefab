@@ -875,8 +875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 287}
-  m_SizeDelta: {x: 1352.8633, y: 144.4158}
+  m_AnchoredPosition: {x: 0, y: 310}
+  m_SizeDelta: {x: 1357.533, y: 275.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8842592822784409761
 CanvasRenderer:
@@ -906,10 +906,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AFTERLIFE
+  m_text: Afterlife
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 80fd23f486d306a4fb3be6d321d0cb1c, type: 2}
-  m_sharedMaterial: {fileID: 5288358782772177516, guid: 80fd23f486d306a4fb3be6d321d0cb1c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 626cc1353f6ba42409415425aedfe383, type: 2}
+  m_sharedMaterial: {fileID: 6623082806004222897, guid: 626cc1353f6ba42409415425aedfe383, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -933,8 +933,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 329.4
+  m_fontSizeBase: 329.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

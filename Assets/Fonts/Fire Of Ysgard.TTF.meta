@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f9b77b6dfaca6e4f9441773863cf167
+guid: 937f892c1c6c89243b29f76b4cf0a769
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Behrens Antiqua Initialen
+  - Fire Of Ysgard Regular
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
