@@ -201,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7811422106164453039, guid: 29b0ecfa158d3b94dbe981da6dd56d00, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7811422106164453039, guid: 29b0ecfa158d3b94dbe981da6dd56d00, type: 3}
       propertyPath: m_AnchorMax.x
@@ -275,12 +275,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7811422106258118005, guid: 29b0ecfa158d3b94dbe981da6dd56d00, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayAgain
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b0ecfa158d3b94dbe981da6dd56d00, type: 3}
+--- !u!1 &1677000737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7811422106258117993, guid: 29b0ecfa158d3b94dbe981da6dd56d00, type: 3}
+  m_PrefabInstance: {fileID: 1677000736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1913486830
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1677000737}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1913486833
@@ -340,8 +341,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913486830}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000015258789, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -369,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580992589523494273, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7580992589523494273, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
       propertyPath: m_AnchorMax.x
@@ -458,6 +459,10 @@ PrefabInstance:
     - target: {fileID: 7580992589523494301, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580992589523494301, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
