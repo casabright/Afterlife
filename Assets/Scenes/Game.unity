@@ -354,6 +354,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7401792284256538997, guid: 1dbd367852a40024dbfcd17a87a1c3f2, type: 3}
   m_PrefabInstance: {fileID: 755620829}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &981430106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 981430106, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
+  m_PrefabInstance: {fileID: 7580992589224703088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1164139477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1164139477, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
+  m_PrefabInstance: {fileID: 7580992589224703088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1424418288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5057465922675960858, guid: 42d57362688a76f45836e41b5a24f7d2, type: 3}
@@ -568,6 +584,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6298048799871840611, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
+      propertyPath: pauseText
+      value: 
+      objectReference: {fileID: 981430106}
+    - target: {fileID: 6298048799871840611, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
+      propertyPath: fadeOutObject
+      value: 
+      objectReference: {fileID: 1164139477}
     - target: {fileID: 6797664536163362820, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -843,18 +867,6 @@ PrefabInstance:
     - target: {fileID: 7580992589523494301, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
       propertyPath: m_Name
       value: Game Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580992589523494303, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580992589523494303, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580992589523494303, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211571edc4b89534fb261a7a97c7fdaf, type: 3}

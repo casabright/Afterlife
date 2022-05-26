@@ -29,6 +29,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitGameOver()
     {
+        FindObjectOfType<GameManager>().FadeToBlack();
         yield return new WaitForSecondsRealtime(sceneLoadDelay);
         SceneManager.LoadScene("Game Over");
     }
@@ -39,6 +40,7 @@ public class SceneLoader : MonoBehaviour
     }
     IEnumerator WaitHeaven()
     {
+        FindObjectOfType<GameManager>().FadeToBlack();
         yield return new WaitForSecondsRealtime(sceneLoadDelay);
         SceneManager.LoadScene("Heaven");
     }

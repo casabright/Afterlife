@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weightOfSins: -9.8
   placeInLine: 1000000
+  paused: 0
+  pauseText: {fileID: 0}
+  fadeOutObject: {fileID: 0}
