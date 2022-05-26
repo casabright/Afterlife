@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float weightOfSins = -9.8f; 
     [SerializeField] int placeInLine = 1000000;
+    [SerializeField] bool paused = false;
 
     private void Awake()
     {
@@ -46,5 +47,19 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public void Pause()
+    {
+        if (!paused)
+        {
+            Time.timeScale = 0f;
+            paused = true;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            paused = false;
+        }
     }
 }

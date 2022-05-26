@@ -33,11 +33,15 @@ public class Player : MonoBehaviour
         playerPos = transform.position;
         SetUpFlightBoundaries();
         InvokeRepeating(nameof(AnimateWings), 0.07f, 0.07f);
+
+        // initial flight
+        movement = Vector3.up * wingPower;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //TODO wait a few seconds
         Flight();
     }
 
@@ -62,9 +66,14 @@ public class Player : MonoBehaviour
 
     private void Flight()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Jump"))
         {
             movement = Vector3.up * wingPower;
+        }
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            gameManager.Pause();
         }
 
         // mobile
