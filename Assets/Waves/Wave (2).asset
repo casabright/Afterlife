@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wave (2)
   m_EditorClassIdentifier: 
   angelPrefab: {fileID: 7301167389375829949, guid: 21a2fe2f20dfa5b4aa39fcff671fdccc, type: 3}
-  pathPrefab: {fileID: 84337624237087403, guid: d5ebfcf66ee64cf468477157adfdc112, type: 3}
-  timeBetweenSpawns: 0.65
-  spawnRandomFactor: 0.3
-  numberOfAngels: 2
-  moveSpeed: 4
+  pathPrefab: {fileID: 2722451853518050376, guid: 1bf7b01289743eb4e87d6439ab6a4f0c, type: 3}
+  timeBetweenSpawns: 4
+  spawnRandomFactor: 2
+  numberOfAngels: 3
+  moveSpeed: 1
