@@ -388,6 +388,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 129471615}
+    - target: {fileID: 4215094804354301560, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215094804354301560, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215094804354301560, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215094804354301560, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215094804354301560, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215094804354301560, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4215094804647111702, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_Name
       value: Heaven Canvas
