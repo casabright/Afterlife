@@ -386,11 +386,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 443687791, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -900
+      value: -950
       objectReference: {fileID: 0}
     - target: {fileID: 828058170, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 720
+      value: 775
       objectReference: {fileID: 0}
     - target: {fileID: 828058171, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_text
@@ -409,11 +409,13 @@ PrefabInstance:
         Schola Gregoriana
 
 
-        Elfman-Rox'
+        Elfman-Rox
+
+        geoneo0'
       objectReference: {fileID: 0}
     - target: {fileID: 1629753233, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 720
+      value: 775
       objectReference: {fileID: 0}
     - target: {fileID: 1629753234, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_text
@@ -431,7 +433,9 @@ PrefabInstance:
 
 
         Sound
-        Effects'
+        Effects
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 4215094803412642321, guid: 518665cabf4230d44adef6b30b55ca4e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
