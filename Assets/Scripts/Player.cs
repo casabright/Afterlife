@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] float wingPower = 5f;
+    [SerializeField] AudioClip flapSound;
+    [SerializeField] [Range(0, 1)] float flapSoundVolume = 0.15f;
+
 
     [Header("Animation")]
     private SpriteRenderer spriteRenderer;
@@ -74,6 +77,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             movement = Vector3.up * wingPower;
+            AudioSource.PlayClipAtPoint(flapSound, Camera.main.transform.position, flapSoundVolume);
         }
 
         if (Input.GetButtonDown("Pause"))

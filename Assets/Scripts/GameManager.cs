@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI pauseText;
     [SerializeField] float weightIncrease = 1.25f;
     [SerializeField] GameObject fadeOutObject;
+    [SerializeField] AudioClip whispersSound;
+    [SerializeField] [Range(0, 1)] float whispersSoundVolume = 0.15f;
 
     private void Awake()
     {
@@ -49,7 +51,10 @@ public class GameManager : MonoBehaviour
 
     public void Sin()
     {
+        // Increase the weight and play whispers
         weightOfSins *= weightIncrease;
+        AudioSource.PlayClipAtPoint(whispersSound, Camera.main.transform.position, whispersSoundVolume);
+
     }
 
     public void ResetGame()

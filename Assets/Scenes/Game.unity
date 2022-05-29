@@ -436,6 +436,10 @@ PrefabInstance:
       propertyPath: fadeOutObject
       value: 
       objectReference: {fileID: 1164139477}
+    - target: {fileID: 6298048799871840611, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
+      propertyPath: whispersSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 15bb578880ba31c42a6e82e333c5c0a9, type: 3}
     - target: {fileID: 6797664536163362820, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -496,6 +500,14 @@ PrefabInstance:
     - target: {fileID: 1533523668284298109, guid: e749da86f86a95a4f8867597e6c4cf49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533523668284298110, guid: e749da86f86a95a4f8867597e6c4cf49, type: 3}
+      propertyPath: flapSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e955a8bdd86201b4aa71ee2adbadefdd, type: 3}
+    - target: {fileID: 1533523668284298110, guid: e749da86f86a95a4f8867597e6c4cf49, type: 3}
+      propertyPath: flapSoundVolume
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1533523668284298110, guid: e749da86f86a95a4f8867597e6c4cf49, type: 3}
       propertyPath: sprites.Array.data[0]
