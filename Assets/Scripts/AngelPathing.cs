@@ -47,7 +47,7 @@ public class AngelPathing : MonoBehaviour
         {
             Destroy(gameObject);
             gameManager.MoveUpInLine(Random.Range(1000, 10000));
-            if (gameManager.GetPlaceInLine() <= 140000)
+            if (gameManager.GetPlaceInLine() <= 144000)
             {
                 sceneLoader.LoadHeaven();
             }
