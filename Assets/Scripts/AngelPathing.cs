@@ -31,6 +31,7 @@ public class AngelPathing : MonoBehaviour
 
     private void Move()
     {
+        // Move angel towards the next waypoint in the path then advance to the next waypoint. 
         if (waypointIndex <= waypoints.Count - 1)
         {
             var targetPosition = waypoints[waypointIndex].transform.position;
@@ -45,8 +46,11 @@ public class AngelPathing : MonoBehaviour
         }
         else
         {
+            // Remove angel and move player up in line.
             Destroy(gameObject);
             gameManager.MoveUpInLine(Random.Range(1000, 10000));
+            
+            // Check if player has won
             if (gameManager.GetPlaceInLine() <= 144000)
             {
                 sceneLoader.LoadHeaven();

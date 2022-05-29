@@ -6,42 +6,44 @@ public class Player : MonoBehaviour
     [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    private Vector3 movement;
-    private Vector3 playerPos;
-    //public float weightOfSins = -9.8f;
-    public float wingPower = 5f;
+    [SerializeField] float wingPower = 5f;
 
     [Header("Animation")]
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
     private int spriteIndex;
 
-    GameManager gameManager;
-    float xMin;
-    float xMax;
-    float yMin;
-    float yMax;
+    // cache variables
+    private GameManager gameManager;
+    private Vector3 movement;
+    private Vector3 playerPos;
+    private float xMin;
+    private float xMax;
+    private float yMin;
+    private float yMax;
 
     public void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
-        gameManager = GameObject.FindObjectOfType(typeof(GameManager)) as GameManager;
+        // Fill cache
+        gameManager = FindObjectOfType<GameManager>();
         playerPos = transform.position;
         SetUpFlightBoundaries();
+
+        // Start the animation for the player.
         InvokeRepeating(nameof(AnimateWings), 0.07f, 0.07f);
 
-        // initial flight
+        // Initial flight
         movement = Vector3.up * wingPower;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO wait a few seconds
         Flight();
     }
 
@@ -66,6 +68,9 @@ public class Player : MonoBehaviour
 
     private void Flight()
     {
+        // Player input
+        movement.x += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+
         if (Input.GetButtonDown("Jump"))
         {
             movement = Vector3.up * wingPower;
@@ -76,22 +81,6 @@ public class Player : MonoBehaviour
             gameManager.Pause();
         }
 
-        // mobile
-        /*if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
-            {
-                movement = Vector3.up * wingPower;
-            }
-        }*/
-        
-        // Pull player down.
-        movement.y += gameManager.GetSinWeight() * Time.deltaTime;
-
-        // Move player left/right
-        movement.x += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        
         // Flip player sprite horizontally if going left
         if (movement.x < 0)
         {
@@ -102,9 +91,11 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        playerPos += movement * Time.deltaTime;
+        // Affect player with the downward force.
+        movement.y += gameManager.GetSinWeight() * Time.deltaTime;
 
-        // keep player on the screen.
+        // Change player position.
+        playerPos += movement * Time.deltaTime;
         playerPos.Set(Mathf.Clamp(playerPos.x, xMin, xMax), Mathf.Clamp(playerPos.y, yMin, yMax), 0);
         transform.position = playerPos;
    }

@@ -48,4 +48,5 @@ MonoBehaviour:
   placeInLine: 1000000
   paused: 0
   pauseText: {fileID: 0}
+  weightIncrease: 1.25
   fadeOutObject: {fileID: 0}

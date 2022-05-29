@@ -5,13 +5,13 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
+    // Config parameters
     [SerializeField] float weightOfSins = -9.8f; 
     [SerializeField] int placeInLine = 1000000;
     [SerializeField] bool paused = false;
-
-    public TextMeshProUGUI pauseText;
-    public GameObject fadeOutObject;
+    [SerializeField] TextMeshProUGUI pauseText;
+    [SerializeField] float weightIncrease = 1.25f;
+    [SerializeField] GameObject fadeOutObject;
 
     private void Awake()
     {
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public int GetPlaceInLine()
     {
         return placeInLine;
@@ -48,13 +49,15 @@ public class GameManager : MonoBehaviour
 
     public void Sin()
     {
-        weightOfSins *= 1.5f;
+        weightOfSins *= weightIncrease;
     }
+
     public void ResetGame()
     {
         Destroy(gameObject);
     }
 
+    // Pause/Unpause the game
     public void Pause()
     {
         if (!paused)
@@ -81,8 +84,10 @@ public class GameManager : MonoBehaviour
         Color objectColor = fadeOutObject.GetComponent<Image>().color;
         float fadeAmount;
 
+
         if (fadeToBlack)
         {
+            // Fade to black.
             while (objectColor.a < 1)
             {
                 fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
@@ -90,8 +95,10 @@ public class GameManager : MonoBehaviour
                 fadeOutObject.GetComponent<Image>().color = objectColor;
                 yield return null;
             }
-        } else
+        } 
+        else
         {
+            // Fade from black.
             while (objectColor.a > 0)
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
