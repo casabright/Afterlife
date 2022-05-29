@@ -10,11 +10,18 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Start Menu");
     }
 
+    public void LoadInstructions()
+    {
+        SceneManager.LoadScene("Instructions");
+
+    }
+
     public void LoadGame()
     {
         SceneManager.LoadScene("Game");
 
     }
+
     public void PlayAgain()
     {
         SceneManager.LoadScene("Game");
