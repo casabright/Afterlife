@@ -436,10 +436,6 @@ PrefabInstance:
       propertyPath: fadeOutObject
       value: 
       objectReference: {fileID: 1164139477}
-    - target: {fileID: 6298048799871840611, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
-      propertyPath: whispersSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 15bb578880ba31c42a6e82e333c5c0a9, type: 3}
     - target: {fileID: 6797664536163362820, guid: 05d45449fe2b0fc4bb01cfd1d392fe6c, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -507,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e955a8bdd86201b4aa71ee2adbadefdd, type: 3}
     - target: {fileID: 1533523668284298110, guid: e749da86f86a95a4f8867597e6c4cf49, type: 3}
       propertyPath: flapSoundVolume
-      value: 0.02
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 1533523668284298110, guid: e749da86f86a95a4f8867597e6c4cf49, type: 3}
       propertyPath: sprites.Array.data[0]
@@ -550,6 +546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6469080915136126230, guid: 93820772825f96545985e466f5fb6e0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6469080915257539738, guid: 93820772825f96545985e466f5fb6e0d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -728,41 +728,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7c17616deb04d534597f9074a411b777, type: 2}
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7ed698498786e8845b23cc630000c8ac, type: 2}
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9689438b7287ef44a82864531c326d76, type: 2}
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 0d91a5dfd8d580742ad62f1f255f88ed, type: 2}
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: caa25f5191edd714db061ab412e7b71b, type: 2}
-    - target: {fileID: 8007602214328157856, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: waveConfigs.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: 735629c928b335244a9b2ebbb2a0a098, type: 2}
     - target: {fileID: 8007602214328157857, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
       propertyPath: m_Name
       value: Angel Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 8007602214328157857, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8007602214328157859, guid: 86d1f5dee571684479b392499fd094cc, type: 3}
       propertyPath: m_RootOrder

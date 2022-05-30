@@ -365,6 +365,14 @@ PrefabInstance:
 
         Escape'
       objectReference: {fileID: 0}
+    - target: {fileID: 63463518733772156, guid: 8063cc315a09ea94db60b05b57c3501a, type: 3}
+      propertyPath: m_text
+      value: It is the end of days and the gates of Heaven have opened. Unfortunately
+        Heaven is overbooked with only 144,000 vacancies. The Lord has sent forth
+        the host to test the multitudes. Each angel that gets close enough to whisper
+        to you will increase the weight of your sins. You must survive the flight
+        until you have a place among the 144,000.
+      objectReference: {fileID: 0}
     - target: {fileID: 3005515743668440868, guid: 8063cc315a09ea94db60b05b57c3501a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -457,6 +465,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 712643590}
+    - target: {fileID: 6222888094036073408, guid: 8063cc315a09ea94db60b05b57c3501a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 199.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8063cc315a09ea94db60b05b57c3501a, type: 3}
 --- !u!1001 &4681015179344241639

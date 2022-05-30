@@ -50,3 +50,5 @@ MonoBehaviour:
   pauseText: {fileID: 0}
   weightIncrease: 1.25
   fadeOutObject: {fileID: 0}
+  whispersSound: {fileID: 8300000, guid: 15bb578880ba31c42a6e82e333c5c0a9, type: 3}
+  whispersSoundVolume: 0.15
